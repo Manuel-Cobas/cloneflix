@@ -37,7 +37,7 @@ const Home = () => {
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
       <Billboard />
-      <div className="pb-40">
+      <div className="pb-40 mt-6">
         <MovieList title="Trending Now" data={movies} />
         <MovieList title="My List" data={favorites} />
       </div>
