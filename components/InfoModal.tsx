@@ -65,7 +65,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                 {data?.genre}
               </p>
             </div>
-            <p className="text-white text-lg overscroll-y-contain">
+            <p className="text-white text-lg overscroll-contain">
               {data?.description}
             </p>
           </div>
