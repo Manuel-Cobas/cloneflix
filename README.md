@@ -20,9 +20,7 @@ Features:
 
 ### Cloning the repository
 
-```shell
 https://github.com/Manuel-Cobas/cloneflix.git
-```
 
 ### Install packages
 
