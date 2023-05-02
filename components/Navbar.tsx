@@ -11,7 +11,7 @@ import NavbarItem from "@/components/NavbarItem";
 import { navSections } from "./consts";
 import Image from "next/image";
 
-const TOP_OFFSET = 66;
+const TOP_OFFSET = 70;
 
 const Navbar = () => {
   const [showAccountMenu, setShowAccountMenu] = useState(false);
