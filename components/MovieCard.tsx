@@ -22,8 +22,9 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   );
 
   return (
-    <div className="group bg-zinc-900 col-span relative w-11/12 m-auto h-[40vw] sm:w-full sm:h-[12vw]">
+    <div className="group bg-zinc-900 col-span relative w-11/12 m-auto h-[32vw] sm:w-full sm:h-[12vw]">
       <Image
+        onClick={() => openModal(data.id)}
         className="
         cursor-pointer 
         object-cover 
@@ -62,7 +63,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
       "
       >
         <img
-          onClick={() => openModal(data?.id)}
+          onClick={redirectToWatch}
           src={data.thumbnailUrl}
           alt="Movie"
           draggable={false}
