@@ -62,22 +62,24 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         group-hover:opacity-100
       "
       >
-        <img
-          onClick={redirectToWatch}
-          src={data.thumbnailUrl}
-          alt="Movie"
-          draggable={false}
+        <div
           className="
-          cursor-pointer
-          object-cover
-          transition
-          duration
-          shadow-xl
-          rounded-t-md
-          w-full
-          h-[12vw]
-        "
-        />
+      w-full h-[12vw]
+       cursor-pointer
+      object-cover
+      transition
+      duration
+      shadow-xl
+      rounded-t-md"
+        >
+          <Image
+            onClick={() => openModal(data?.id)}
+            src={data.thumbnailUrl}
+            alt="Thumbnail"
+            fill
+            quality={60}
+          />
+        </div>
         <div
           className="
           z-10

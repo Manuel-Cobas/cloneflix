@@ -9,6 +9,7 @@ import AccountMenu from "@/components/AccountMenu";
 import MobileMenu from "@/components/MobileMenu";
 import NavbarItem from "@/components/NavbarItem";
 import { navSections } from "./consts";
+import Image from "next/image";
 
 const TOP_OFFSET = 66;
 
@@ -48,7 +49,7 @@ const Navbar = () => {
           showBackground ? "bg-zinc-900 bg-opacity-90" : ""
         }`}
       >
-        <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" />
+        <Image height={52} width={120} src="/images/cloneflix.png" alt="logo" />
         <div className="flex-row ml-8 gap-7 hidden lg:flex">
           {navSections.map((label, index) => (
             <div key={index}>
@@ -79,8 +80,14 @@ const Navbar = () => {
             onClick={toggleAccountMenu}
             className="flex flex-row items-center gap-2 cursor-pointer relative"
           >
-            <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
-              <img src="/images/default-blue.png" alt="" />
+            <div className="relative w-6 h-6 lg:w-10 lg:h-10">
+              <Image
+                src="/images/default-blue.png"
+                alt="profile"
+                className="rounded-md overflow-hidden"
+                fill
+                quality={60}
+              />
             </div>
             <ChevronDownIcon
               className={`w-4 text-white fill-white transition ${
