@@ -64,7 +64,7 @@ const Navbar = () => {
         </div>
         <div
           onClick={toggleMobileMenu}
-          className="lg:hidden flex flex-row items-center gap-2 ml-4 cursor-pointer relative"
+          className="lg:hidden flex flex-row items-center gap-2 ml-4 sm:ml-8 cursor-pointer relative"
         >
           <p className="text-white text-sm">Browse</p>
           <ChevronDownIcon
@@ -75,7 +75,7 @@ const Navbar = () => {
           <MobileMenu visible={showMobileMenu} />
         </div>
 
-        <div className="flex flex-row ml-auto gap-5 items-center mr-2">
+        <div className="flex flex-row ml-auto gap-5 sm:gap-7 items-center mr-3">
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
             <MagnifyingGlassIcon className="w-6" />
           </div>
