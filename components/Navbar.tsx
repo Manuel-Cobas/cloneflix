@@ -45,11 +45,16 @@ const Navbar = () => {
   return (
     <nav className="w-full fixed z-40">
       <div
-        className={`px-4 md:px-16 py-6 flex flex-row items-center transition duration-500 ${
+        className={`pl-1 md:px-16 py-6 flex flex-row items-center transition duration-500 ${
           showBackground ? "bg-zinc-900 bg-opacity-90" : ""
         }`}
       >
-        <Image height={52} width={120} src="/images/cloneflix.png" alt="logo" />
+        <Image
+            height={52}
+            width={120}
+            src="/images/cloneflix.png"
+            alt="logo"
+          />
         <div className="flex-row ml-8 gap-7 hidden lg:flex">
           {navSections.map((label, index) => (
             <div key={index}>
@@ -59,7 +64,7 @@ const Navbar = () => {
         </div>
         <div
           onClick={toggleMobileMenu}
-          className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative"
+          className="lg:hidden flex flex-row items-center gap-2 ml-4 cursor-pointer relative"
         >
           <p className="text-white text-sm">Browse</p>
           <ChevronDownIcon
@@ -69,7 +74,8 @@ const Navbar = () => {
           />
           <MobileMenu visible={showMobileMenu} />
         </div>
-        <div className="flex flex-row ml-auto gap-7 items-center">
+
+        <div className="flex flex-row ml-auto gap-5 items-center mr-2">
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
             <MagnifyingGlassIcon className="w-6" />
           </div>
@@ -81,14 +87,14 @@ const Navbar = () => {
             className="flex flex-row items-center gap-2 cursor-pointer relative"
           >
             <div className="relative w-6 h-6 lg:w-10 lg:h-10">
-              <Image
-                src="/images/default-blue.png"
-                alt="profile"
-                className="rounded-md overflow-hidden"
-                fill
-                quality={60}
-              />
-            </div>
+                <Image
+                  src="/images/default-blue.png"
+                  alt="profile"
+                  className="rounded-md overflow-hidden"
+                  fill
+                  quality={60}
+                />
+              </div>
             <ChevronDownIcon
               className={`w-4 text-white fill-white transition ${
                 showAccountMenu ? "rotate-180" : "rotate-0"
