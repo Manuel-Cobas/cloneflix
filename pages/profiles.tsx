@@ -39,9 +39,14 @@ const UserCard: React.FC<UserCardProps> = ({ name }) => {
 
   return (
     <div className="group flex-row w-44 mx-auto">
-      <div className="w-44 relative h-44 rounded-md flex w-max h-max object-contain items-center justify-center border-2 border-transparent group-hover:cursor-pointer group-hover:border-white overflow-hidden">
-        <Image draggable={false} src={imgSrc} alt="Profile" fill sizes="object-cover "/>
-      </div>
+      <Image
+        draggable={false}
+        src={imgSrc}
+        alt="Profile"
+        fill
+        sizes="object-cover w-44 relative h-44 rounded-md flex w-max h-max object-contain items-center justify-center border-2 border-transparent group-hover:cursor-pointer group-hover:border-white overflow-hidden"
+      />
+
       <div className="mt-4 text-gray-400 text-2xl text-center group-hover:text-white">
         {name}
       </div>
