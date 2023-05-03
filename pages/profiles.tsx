@@ -42,9 +42,10 @@ const UserCard: React.FC<UserCardProps> = ({ name }) => {
       <div className="w-44 h-44 rounded-md flex items-center justify-center border-2 border-transparent group-hover:cursor-pointer group-hover:border-white overflow-hidden">
         <Image
           draggable={false}
-          className="w-max h-max object-contain"
+          className="w-max h-max object-cover"
           src={imgSrc}
           alt="Profile cloneflix"
+          sizes="object-contain"
           fill
         />
       </div>
