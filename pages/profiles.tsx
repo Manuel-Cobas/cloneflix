@@ -45,7 +45,7 @@ const UserCard: React.FC<UserCardProps> = ({ name }) => {
           className="w-max h-max object-cover"
           src={imgSrc}
           alt="Profile cloneflix"
-          sizes="object-contain"
+          sizes="object-cover"
           fill
         />
       </div>
